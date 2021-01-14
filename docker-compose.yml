@@ -1,0 +1,20 @@
+version: "3"
+services:
+  server:
+    build: https://github.com/ottomated/CrewLink-server.git
+    image: ottomated/crewlink-server:build
+    container_name: crewlinkserver
+    volumes:
+            - /etc/letsencrypt/:/letsencrypt/
+    ports:
+        - 9736:9736
+        - 443:443
+    expose:
+        - 9736
+        - 443
+    environment:
+        ADDRESS: "https://crewlink.mydan.de"
+        NAME: crewlink
+        HTTPS: "true" #Enables https. You must place privkey.pem and fullchain.pem in your CWD.
+        SSLPATH: /letsencrypt/live/crewlink.mydan.de/ #Specifies an alternate path to SSL certificates.
+    restart: unless-stopped
