@@ -1,2 +1,2 @@
 # crewlink-server-compose
-docker-compose for https://github.com/ottomated/CrewLink-server
+docker-compose for https://github.com/OhMyGuus/BetterCrewLink-server
