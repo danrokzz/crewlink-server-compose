@@ -1,9 +1,9 @@
 version: "3"
 services:
   server:
-    build: https://github.com/ottomated/CrewLink-server.git
-    image: ottomated/crewlink-server:build
-    container_name: crewlinkserver
+    build: https://github.com/OhMyGuus/BetterCrewLink-server.git
+    image: ohmyguus/bettercrewlink-server:build
+    container_name: bettercrewlinkserver
     volumes:
             - /etc/letsencrypt/:/letsencrypt/
     ports:
